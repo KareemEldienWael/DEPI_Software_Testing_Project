@@ -1,6 +1,6 @@
 # DEPI Software Testing Project
 This project is an end-to-end web automation testing framework built using Selenium.  
-Our target website for automation is [Coursera], where we automate and validate critical workflows such as search, filters, user authentication, and transactions.
+Our target website for automation is **Coursera**, where we automate and validate critical workflows such as search, filters, user authentication, and transactions.
 
 ## 👥 Team Members
 * Kareem Eldien Wael Abdualla
