@@ -2,7 +2,7 @@
 
 ## 📌 Project Idea
 This project is an end-to-end web automation testing framework built using Selenium and Postman.  
-Our target website for automation is [Coursera], where we automate and validate critical workflows such as search, filters, user authentication, and transactions.
+Our target website for automation is **Coursera**, where we automate and validate critical workflows such as search, filters, user authentication, and transactions.
 
 ## 👥 Team Members (pentaRae)
 * Kareem Eldien Wael Abdualla  
