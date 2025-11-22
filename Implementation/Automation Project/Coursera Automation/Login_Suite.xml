@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Login_Suite">
+  <test name="Login_happyTests">
+    <classes>
+      <class name="tests.Login_positiveScenarioWithDataProvider"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Login_negativeTests">
+    <classes>
+      <class name="tests.Login_negativeScenarioWithDataProvider"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
