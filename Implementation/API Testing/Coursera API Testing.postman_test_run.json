@@ -1,0 +1,458 @@
+{
+	"id": "566e221c-0054-454c-99d6-0dcf6a96dd97",
+	"name": "Coursera API Testing",
+	"timestamp": "2025-12-06T16:47:37.315Z",
+	"collection_id": "44655057-4f27630c-2ff9-4ccd-be47-507cd980aa55",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 31,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-12-06T16:47:33.744Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6a96dfc1-4333-4000-a9fa-6bde3899b625",
+			"name": "Verify Valid Search Request",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 245,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				245
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true
+				}
+			]
+		},
+		{
+			"id": "c1a0dda0-dc97-455c-a41a-48db47d44ebc",
+			"name": "Verify Invalid Query Type Search Request",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 196,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status Code is 400": true,
+				"Error Code is BAD_USER_INPUT": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error Code is BAD_USER_INPUT": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status Code is 400": true,
+					"Error Code is BAD_USER_INPUT": true
+				}
+			]
+		},
+		{
+			"id": "5c895e16-77bb-4e7a-beed-e8c4d2f19381",
+			"name": "Verify Invalid Entity Type Search Request",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 196,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status Code is 400": true,
+				"Error Code is BAD_USER_INPUT": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error Code is BAD_USER_INPUT": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status Code is 400": true,
+					"Error Code is BAD_USER_INPUT": true
+				}
+			]
+		},
+		{
+			"id": "97a91ab1-d2f4-488e-afa7-d067ff17cbc4",
+			"name": "Verify Valid Search Request without Auth",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 208,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				208
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true
+				}
+			]
+		},
+		{
+			"id": "af89eebb-d393-4bde-a526-fcd598207eec",
+			"name": "Verify Valid Search Request with Page 2",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true
+				}
+			]
+		},
+		{
+			"id": "61b906b9-088b-44d1-a56c-85d0b2da9f76",
+			"name": "Verify SQL Injection Search Request",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 222,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				222
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true
+				}
+			]
+		},
+		{
+			"id": "8e3b2d82-76f8-483b-9b41-41d038d03d05",
+			"name": "Verify Wrong Content Type Search Request",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 191,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status Code is 400": true,
+				"Error Message is BAD_REQUEST": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error Message is BAD_REQUEST": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status Code is 400": true,
+					"Error Message is BAD_REQUEST": true
+				}
+			]
+		},
+		{
+			"id": "ab7b0be6-ef84-4d35-a8ee-b42e762c7dfb",
+			"name": "Verify Valid Search Request with Filters and Sorting",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 263,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true,
+				"Response contains products": true,
+				"Response also contains suggestions": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response also contains suggestions": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				263
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true,
+					"Response contains products": true,
+					"Response also contains suggestions": true
+				}
+			]
+		},
+		{
+			"id": "c746d2fb-01f3-49d7-a5f1-8b6b1fa8412b",
+			"name": "Verify Valid Search Request returns Sorted Results",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 275,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Search elements exist": true,
+				"Pagination exists": true,
+				"Response contains products": true,
+				"Response also contains suggestions": true,
+				"Sorting applied correctly (NEW)": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search elements exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pagination exists": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response also contains suggestions": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Sorting applied correctly (NEW)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				275
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Search elements exist": true,
+					"Pagination exists": true,
+					"Response contains products": true,
+					"Response also contains suggestions": true,
+					"Sorting applied correctly (NEW)": true
+				}
+			]
+		},
+		{
+			"id": "e7202555-0feb-4d5c-874f-530fb168e053",
+			"name": "Verify Valid Search Request with Invalid Filters",
+			"url": "https://www.coursera.org/graphql-gateway?opname=Search",
+			"time": 210,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Zero results for invalid facet": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Zero results for invalid facet": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				210
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Zero results for invalid facet": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2254,
+	"collection": {
+		"requests": [
+			{
+				"id": "6a96dfc1-4333-4000-a9fa-6bde3899b625",
+				"method": "POST"
+			},
+			{
+				"id": "c1a0dda0-dc97-455c-a41a-48db47d44ebc",
+				"method": "POST"
+			},
+			{
+				"id": "5c895e16-77bb-4e7a-beed-e8c4d2f19381",
+				"method": "POST"
+			},
+			{
+				"id": "97a91ab1-d2f4-488e-afa7-d067ff17cbc4",
+				"method": "POST"
+			},
+			{
+				"id": "af89eebb-d393-4bde-a526-fcd598207eec",
+				"method": "POST"
+			},
+			{
+				"id": "61b906b9-088b-44d1-a56c-85d0b2da9f76",
+				"method": "POST"
+			},
+			{
+				"id": "8e3b2d82-76f8-483b-9b41-41d038d03d05",
+				"method": "POST"
+			},
+			{
+				"id": "ab7b0be6-ef84-4d35-a8ee-b42e762c7dfb",
+				"method": "POST"
+			},
+			{
+				"id": "c746d2fb-01f3-49d7-a5f1-8b6b1fa8412b",
+				"method": "POST"
+			},
+			{
+				"id": "e7202555-0feb-4d5c-874f-530fb168e053",
+				"method": "POST"
+			}
+		]
+	}
+}
