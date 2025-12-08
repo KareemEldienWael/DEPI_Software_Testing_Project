@@ -39,7 +39,7 @@ public class FiltersPage extends PageBase {
     @FindBy(xpath="//button[contains(@aria-label,'Subtitles filter')]")
     WebElement subtitleFilterButton;
 
-    @FindBy(xpath="//button[text()='Clear']")
+    @FindBy(xpath="(//button/span[text()='Clear all'])[2]")
     WebElement clearFiltersButton;
 
     @FindBy(xpath = "//button/span[contains(text(),'View')]")
@@ -51,12 +51,19 @@ public class FiltersPage extends PageBase {
     }
 
     // Method لاختيار لغة
-    public void selectLanguage(String language){
+    public void selectLanguage(String language) throws InterruptedException {
         languageFilterButton.click();
-
-        By languageOption = By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and contains(text(),'" + language + "')]");
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(languageOption));
+        Thread.sleep(1000);
+        WebElement showMore = driver.findElement(By.xpath("//button[contains(@data-testid, 'expand-filter-items-button')]"));
+        showMore.click();
+        WebElement languageOption = driver.findElement(By.xpath("//label/div/span/span[contains(text(),'" + language + "')]"));
+        WebElement option =languageOption;
         option.click();
+        //By languageCheckbox = By.xpath("//label/div/span/span[contains(text(),'" + language + "')]");
+        //WebElement languageFilterDropdown;
+        Thread.sleep(1000);
+
+        //applyFilterButton.click();
     }
 
     // Method لاختيار مستوى
@@ -85,9 +92,10 @@ public class FiltersPage extends PageBase {
 
     // Method لمسح كل الفلاتر
     public void clearFilters(){
-        wait.until(ExpectedConditions.elementToBeClickable(clearFiltersButton));
-        js.executeScript("arguments[0].scrollIntoView(true);", clearFiltersButton);
-        actions.moveToElement(clearFiltersButton).click().perform();
+//        wait.until(ExpectedConditions.elementToBeClickable(clearFiltersButton));
+//        js.executeScript("arguments[0].scrollIntoView(true);", clearFiltersButton);
+//        actions.moveToElement(clearFiltersButton).click().perform();
+        clearFiltersButton.click();
     }
 
     public void applyFilter(){

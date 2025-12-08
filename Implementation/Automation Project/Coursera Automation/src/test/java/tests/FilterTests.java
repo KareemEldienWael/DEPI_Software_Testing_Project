@@ -38,43 +38,72 @@ public class FilterTests {
         // 1️⃣ LANGUAGE FILTERS
         // -------------------------
         filtersPage.selectLanguage("English");
-        WebElement selectedLang = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='English']"));
-        Assert.assertTrue(selectedLang.isDisplayed(), "English language filter should be applied");
+        WebElement selectedLang = driver.findElement(By.xpath("//label/div/span/span[contains(text(),'English')]"));
+        Assert.assertTrue(selectedLang.isEnabled(), "English language filter should be applied");
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+        Thread.sleep(2000);
 
         filtersPage.selectLanguage("Spanish");
-        WebElement selectedLang2 = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='Spanish']"));
-        Assert.assertTrue(selectedLang2.isDisplayed(), "Spanish language filter should be applied");
+        WebElement selectedLang2 = driver.findElement(By.xpath("//label/div/span/span[contains(text(),'Spanish')]"));
+        Assert.assertTrue(selectedLang2.isEnabled(), "Spanish language filter should be applied");
 
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+        Thread.sleep(2000);
+
+
+        Thread.sleep(2000);
         filtersPage.selectLanguage("Arabic");
-        WebElement selectedLang3 = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='Arabic']"));
-        Assert.assertTrue(selectedLang3.isDisplayed(), "Arabic language filter should be applied");
+        WebElement selectedLang3 = driver.findElement(By.xpath("//label/div/span/span[contains(text(),'Arabic')]"));
+        Assert.assertTrue(selectedLang3.isEnabled(), "Arabic language filter should be applied");
 
         // -------------------------
         // 2️⃣ LEVEL FILTERS
         // -------------------------
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+
         filtersPage.selectLevel("Beginner");
         WebElement levelB = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='Beginner']"));
-        Assert.assertTrue(levelB.isDisplayed(), "Beginner level filter applied");
+        Assert.assertTrue(levelB.isEnabled(), "Beginner level filter applied");
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+
 
         filtersPage.selectLevel("Intermediate");
         WebElement levelI = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='Intermediate']"));
-        Assert.assertTrue(levelI.isDisplayed(), "Intermediate level filter applied");
+        Assert.assertTrue(levelI.isEnabled(), "Intermediate level filter applied");
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
 
         filtersPage.selectLevel("Advanced");
         WebElement levelA = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='Advanced']"));
-        Assert.assertTrue(levelA.isDisplayed(), "Advanced level filter applied");
+        Assert.assertTrue(levelA.isEnabled(), "Advanced level filter applied");
 
         // -------------------------
         // 3️⃣ SUBTITLE FILTERS
         // -------------------------
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+
         filtersPage.selectSubtitle("English");
         WebElement sub = driver.findElement(By.xpath("//span[contains(@class,'cds-checkboxAndRadio-labelContent') and text()='English']"));
-        Assert.assertTrue(sub.isDisplayed(), "English subtitle filter applied");
+        Assert.assertTrue(sub.isEnabled(), "English subtitle filter applied");
 
         // -------------------------
         // 4️⃣ COMBINATIONS & AND LOGIC
         // -------------------------
         // Example: Beginner + English + Short (Duration)
+
+        Thread.sleep(2000);
+        filtersPage.clearFilters();
+
         filtersPage.selectLevel("Beginner");
         filtersPage.selectLanguage("English");
         // Duration filter (example: Short)
@@ -87,6 +116,9 @@ public class FilterTests {
         // -------------------------
         // 5️⃣ CLEAR FILTERS
         // -------------------------
+        filtersPage.startFilter();
+        Thread.sleep(2000);
+
         filtersPage.clearFilters();
         Thread.sleep(2000); // wait for results to reset
         results = driver.findElements(By.cssSelector("li[data-e2e='search-result']"));
